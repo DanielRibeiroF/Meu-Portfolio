@@ -5,6 +5,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import StyledButton from "../../../../components/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackgorund/AnimetedBackground";
+import { Padding } from "@mui/icons-material";
 
 
 
@@ -16,6 +17,14 @@ const Hero = () => {
         height: "100vh",
         display:"flex",
         alignItems:"center",
+        [theme.breakpoints.up ('xs')]: { // <= mobile
+            paddingTop:"100px"
+
+        },
+        [theme.breakpoints.up ('md')]: { // >==mobile
+            paddingTop:"0"
+
+        }
 
 
     }))
