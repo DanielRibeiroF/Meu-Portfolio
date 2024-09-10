@@ -4,10 +4,11 @@ import { ReactNode } from "react"
 
 interface StyledButtonProps {
     children: ReactNode
+    onClick: () => void
 }
 //Essa INTERFACE E STYLED, BUTTONPROPS É NECESSSARIO DEFINIR CHAMANDO A CHILDREN DENTRO DA INTERFACE PARA CONSEGUIR COLOCAR O BOTÃO DENTRO DO HERO E DAQUI E UTILIZAR ELE
 
-const StyledButton: React.FC<StyledButtonProps> =({children}) => {
+const StyledButton: React.FC<StyledButtonProps> =({children, onClick }) => {
 
 
     const StyledButton = styled("button")(({theme}) => ({
@@ -29,7 +30,7 @@ const StyledButton: React.FC<StyledButtonProps> =({children}) => {
 
     return (
       <>
-      <StyledButton>
+      <StyledButton onClick={onClick}>
         {children}
       </StyledButton>
       </>
