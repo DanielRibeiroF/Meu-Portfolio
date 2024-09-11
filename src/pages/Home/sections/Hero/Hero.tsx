@@ -33,6 +33,25 @@ const Hero = () => {
         borderRadius: "50%",
         border:`1px solid ${theme.palette.primary.contrastText}`,
     }))
+    const handleEmailClick = () => {
+        // Substitua com seu endereço de e-mail, assunto e corpo do e-mail
+        const email = 'danielferreirar327@gmail.com';
+        const subject = 'Assunto do E-mail';
+        const body = 'Corpo do e-mail';
+    
+        // Codifica os parâmetros para garantir que eles sejam interpretados corretamente
+        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+        window.location.href = mailtoLink;
+      };
+
+      const handleClick = () => {
+        // URL modificada para download direto
+        const drivePdfUrl = 'https://drive.google.com/file/d/1BV1BrArQo5UdbO0XL7FyAWq23zBB_T-9/view?usp=drive_link';
+    
+        // Abrir o PDF em uma nova aba para iniciar o download
+        window.open(drivePdfUrl, '_blank');
+      };
 
     return (
         <>
@@ -54,22 +73,23 @@ const Hero = () => {
                         </Grid>
                         <Grid size={{ xs: 12, md: 7 }}>
                             <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}>Daniel Ribeiro</Typography>
-                            <Typography color="primary.contrastText" variant="h2" textAlign="center">I'm a Programmer</Typography>
+                            <Typography color="primary.contrastText" variant="h2" textAlign="center">Programador</Typography>
                             <Grid container display="flex"  justifyContent="center" spacing={3} pt={3}>
                                 <Grid size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
-                                        <StyledButton>
+                                        <StyledButton onClick={handleClick}>
                                         <DownloadIcon />
                                         <Typography>
+                                            
                                         Download CV
                                         </Typography>
                                             
                                         </StyledButton>
                                 </Grid>
                                 <Grid size={{ xs: 12, md: 4 }}>
-                                    <StyledButton >
+                                    <StyledButton onClick={handleEmailClick}>
                                         <MailOutlineIcon />
                                          <Typography>
-                                         Contact me
+                                         Me contate
                                          </Typography>
                                         </StyledButton >
                                 </Grid>
