@@ -3,8 +3,8 @@ import Grid from '@mui/material/Grid2';
 import Avatar from "../../../../assets/Images/Avatar.jpeg"
 import DownloadIcon from '@mui/icons-material/Download';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import StyledButton from "../../../../components/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackgorund/AnimetedBackground";
+import StyledButton from "../../../../components/StyledButton/StyledButton";
 
 
 
@@ -47,7 +47,7 @@ const Hero = () => {
 
       const handleClick = () => {
         // URL modificada para download direto
-        const drivePdfUrl = 'https://drive.google.com/file/d/1BV1BrArQo5UdbO0XL7FyAWq23zBB_T-9/view?usp=drive_link';
+        const drivePdfUrl = 'https://drive.google.com/file/d/1Bha2JSFtcYPyF2EZoblsQsGD3SPnXbB9/view?usp=sharing';
     
         // Abrir o PDF em uma nova aba para iniciar o download
         window.open(drivePdfUrl, '_blank');
