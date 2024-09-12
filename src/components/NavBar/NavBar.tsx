@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppBar, MenuItem, Toolbar, Dialog, DialogTitle, DialogContent, Typography, Box, Grid, IconButton, styled } from '@mui/material';
+import { AppBar, MenuItem, Toolbar, Dialog, DialogTitle, DialogContent, Typography, Box, IconButton, styled } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School'; // Importando um ícone de exemplo
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
@@ -29,6 +29,8 @@ const SkillBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.grey[200],
   boxShadow: theme.shadows[1],
   textAlign: 'center',
+  flex: '1 1 calc(33.333% - 16px)', // Flex-grow, flex-shrink, and flex-basis
+  margin: theme.spacing(1), // Espaçamento entre caixas
 }));
 
 const skills = [
@@ -41,7 +43,7 @@ const skills = [
   'PYTHON',
   'DJANGO',
   'MYSQL',
-  'MANGODB',
+  'MONGODB',
   'C',
   'ANGULAR'
 ];
@@ -93,21 +95,17 @@ const NavBar = () => {
             </InfoBox>
           )}
           {dialogContent.title === 'Habilidades' && (
-            <Box>
+            <Box display="flex" flexWrap="wrap" justifyContent="space-between">
               <Typography variant="h6" gutterBottom>Minhas Habilidades</Typography>
-              <Grid container spacing={2}>
-                {skills.map((skill, index) => (
-                  <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-                    <SkillBox>
-                      <Typography variant="body2">{skill}</Typography>
-                    </SkillBox>
-                  </Grid>
-                ))}
-              </Grid>
+              {skills.map((skill, index) => (
+                <SkillBox key={index}>
+                  <Typography variant="body2">{skill}</Typography>
+                </SkillBox>
+              ))}
             </Box>
           )}
           {dialogContent.title === 'Projetos' && (
-            <Typography>Conteúdo de Projetos.</Typography>
+            <Typography>{dialogContent.content}</Typography>
           )}
         </DialogContent>
       </Dialog>
