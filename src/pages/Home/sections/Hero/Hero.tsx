@@ -7,8 +7,6 @@ import { AnimatedBackground } from "../../../../components/AnimatedBackgorund/An
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 
 
-
-
 const Hero = () => {
 
     const StyledHero = styled("div")(({theme}) => ({
