@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+
 import { AppBar, MenuItem, Toolbar, Dialog, DialogTitle, DialogContent, Typography, Box, IconButton, styled } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School'; // Importando um ícone de exemplo
+import { useState } from 'react';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',

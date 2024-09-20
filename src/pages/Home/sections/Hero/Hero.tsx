@@ -45,7 +45,7 @@ const Hero = () => {
 
       const handleClick = () => {
         // URL modificada para download direto
-        const drivePdfUrl = 'https://drive.google.com/file/d/1Bha2JSFtcYPyF2EZoblsQsGD3SPnXbB9/view?usp=sharing';
+        const drivePdfUrl = 'https://drive.google.com/file/d/1DZ26G-w86bZvWnib9TK4C50ZV_CXNcZY/view?usp=sharing';
     
         // Abrir o PDF em uma nova aba para iniciar o download
         window.open(drivePdfUrl, '_blank');
